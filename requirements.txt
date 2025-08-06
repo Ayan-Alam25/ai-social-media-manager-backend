@@ -150,3 +150,4 @@ yarl==1.19.0
 zipp==3.21.0
 zope.deprecation==5.1
 zope.interface==7.2
+flask_cors==4.0.0

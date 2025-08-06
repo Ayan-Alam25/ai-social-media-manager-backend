@@ -4,6 +4,7 @@ import json
 from utils.scraper import extract_business_profile, get_industry_news
 from utils.generator import generate_captions
 from utils.planner import load_schedule, save_schedule
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -62,4 +63,5 @@ def fb_publish():
     return jsonify({"url": "https://facebook.com/page/post/xyz123"})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
